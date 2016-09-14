@@ -56,8 +56,9 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="TestContext\DbFakes.cs" />
     <Compile Include="TestContext\DirectoryTestContext.cs" />
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="DirectoryServiceTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

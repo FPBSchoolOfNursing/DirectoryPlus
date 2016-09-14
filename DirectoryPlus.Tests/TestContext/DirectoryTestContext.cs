@@ -19,8 +19,8 @@ namespace DirectoryPlus.Tests.TestContext
     public class DirectoryTestContext : IDirectoryContext
     {
         public DirectoryTestContext() {
-            this.People = null;
-            this.Offices = null;
+            this.People = new TestDbSet<Person>();
+            this.Offices = new TestDbSet<Office>();
         }
 
         public DbSet<Office> Offices { get; set; }

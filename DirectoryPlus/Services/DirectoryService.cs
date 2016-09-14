@@ -20,6 +20,7 @@ namespace DirectoryPlus.Services
         public void AddDirectoryEntry(Person person)
         {           
             _context.People.Add(person);
+            _context.SaveChanges();
         }
     }
 }

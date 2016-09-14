@@ -12,5 +12,6 @@ namespace DirectoryPlus.Interfaces
     {
         DbSet<Person> People { get; set; }
         DbSet<Office> Offices { get; set; }
+        int SaveChanges();
     }
 }
