@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DirectoryPlus", "DirectoryP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DirectoryPlus.Tests", "DirectoryPlus.Tests\DirectoryPlus.Tests.csproj", "{3E300D3B-B55C-4E2F-A153-525BEB4BAE8A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CasAuthenticationMiddleware", "..\MVC-Cas\CasAuthenticationMiddleware\CasAuthenticationMiddleware.csproj", "{F4399033-E4E9-4287-8D3A-9BF12E7B9395}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{3E300D3B-B55C-4E2F-A153-525BEB4BAE8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E300D3B-B55C-4E2F-A153-525BEB4BAE8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E300D3B-B55C-4E2F-A153-525BEB4BAE8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4399033-E4E9-4287-8D3A-9BF12E7B9395}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4399033-E4E9-4287-8D3A-9BF12E7B9395}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4399033-E4E9-4287-8D3A-9BF12E7B9395}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4399033-E4E9-4287-8D3A-9BF12E7B9395}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
