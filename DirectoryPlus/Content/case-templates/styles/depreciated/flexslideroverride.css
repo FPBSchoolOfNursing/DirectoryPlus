@@ -1,0 +1,58 @@
+
+/* Flexslider captions from old template
+.flex-caption { 
+	position:absolute; 
+	bottom:0; left:0; right:0;
+	
+	background-color:rgba(10,48,78, .9); 
+	*background-color:#0a304e;  
+	padding:20px; 
+	margin:0 !important; 
+	color:#fff; 
+	 font-size:30px; }
+	 */
+	 
+/* Flex slider fixes for branch 0.2 
+ 	You need the relative postion on the list elements
+*/
+/*
+.flexslider .slides li {
+    position:relative;
+}
+*/
+
+/*
+.flex-caption {
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+	
+	padding: 20px;
+	margin:0 !important;
+	
+   	background-color:rgba(10,48,78, .9); 
+	*background-color:#0a304e; 
+	color:#fff;    
+    font-size:30px; /* consider changing the font size. if not here maybe in the media queries below. * /
+	
+	z-index: 1;     
+}*/
+
+
+/* remove the border from flexslider */
+.flexslider{
+	/*background:none;
+	border:none;
+	margin:0px;*/
+	
+	/* there is a bug in flexslider, if you set the border to be 0px it'll half the size of
+		of the image if it's outside the bounds of the image. See issue #19 in github.
+	
+	border: 1px solid #f5f5f5 !important;
+	box-shadow:none;
+	*/
+}
+
+/* fix for issue #28 */
+/* fix for issue #441 (https://github.com/woothemes/FlexSlider/issues/441) */

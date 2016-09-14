@@ -1,0 +1,27 @@
+/* Buttons --------------------*/
+a[class^="btn-"] { 
+	display: inline-block;
+	text-transform:uppercase;
+	padding: 15px; 
+	margin: 10px 5px;
+	text-align:center;
+	text-decoration:none;
+	border: 0;
+	border-bottom-width: 5px;
+	border-bottom-style: solid;
+	cursor: pointer;
+	outline:none;
+}
+
+/* Gray */
+.btn-gray { background-color:#e3e3e3; color:#333; border-bottom-color: #999999 !important; }
+.btn-gray:hover { background-color:#d3d3d3; }
+.btn-gray:active { border-bottom: 5px solid #cccccc; }
+.btn-gray .glyphicon, .btn-gray .fa { color: #626262; } /* fix the icon color for blue buttons. */
+
+/* Blue */
+.btn-blue { background-color:#0a304e; color:#fff !important; border-bottom-color: #061E30 !important; }
+.btn-blue:hover {background-color:#0e446e; color:#fff; }
+.btn-blue:active {border-bottom: 5px solid #294051;}
+.btn-blue .glyphicon, .btn-blue .fa { color: #a5a5a5; } /* fix the icon color for blue buttons. */
+

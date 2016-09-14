@@ -1,0 +1,57 @@
+/* Tablet */
+@media screen and (max-width: 767px) {
+/* h1, h2, h3, h4, h5, h6 { font-weight: 600; }  */
+h1 { font-size:1.6em; } /* Arbitrary. I wanted to use a 1.6 or ratio 767:1232, which falls apart at the H3 for p blocks */
+h2 { font-size:1.4em; }
+h3 { font-size:1.3em; }
+h4 { font-size:1.2em; }
+h5 { font-size:1.1em; }
+h6 { font-size:1.0em; }
+
+body p {font-size:90%; }
+blockquote {margin-left: 0; }
+body a:hover {text-decoration:none; }
+.right-border { 	border-right: none; } /* remove vertical borders in mobile modes. */ 
+.left-border { border-left: none; }
+header .container .logo { margin-left: 0.9375em; } /* matches gutters in bootstrap. */
+
+#global-menu-toggle {
+	background-color:rgba(255,255,255,.1);  
+	font-size:80%; 
+	position:relative; 
+	margin-top:-14px; 	
+	padding:8px 10px 8px 14px; 
+	float: right;
+	/* right: 0.9375em; Add 15px gutter to the right in mobile? */
+}
+
+.cwru-links { position:relative; padding:0 !important; margin:0 !important; width:100% !important;  }
+.cwru-links ul {padding:0; margin:-53px 0 45px 0 !important; display:none; box-shadow: none; }
+.cwru-links li {margin:0; padding:0; list-style-type:none; }
+.cwru-links li a {display:block; font-size:20px; padding:13px 20px;  color:#333; text-decoration:none; border-bottom:solid 1px rgba(153,153,153,.2); }
+
+#site-title { left:0; right:0; text-align:center; font-size:1.0rem; }
+
+
+/* asides, .staff are on child pages */
+aside { float: none; margin: 0; width: 100%; } 
+.staff img {float:none; margin:0 }
+.staff div { display:block; }
+
+figure.small-feature figcaption { display: block; }
+.thumbnail-list { width: auto; }
+/* Footer */
+footer section { width: 100%; }
+footer section address {display:block; text-align:center; }
+footer section ul {margin:10px 0 0 0; display:block;}
+footer section li { display:block;  !important; border-bottom:solid 1px #ddd;  }
+footer section li a {  float:none; width:100%; display:block; padding:15px 0;  }
+}
+
+
+
+/* Tablet --Retina display */
+@media screen and (min-device-width : 767px) and (max-device-width : 1024px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio: 2) {
+.cwru-links {top:52px; width:30%; }
+.cwru-links ul {margin-top:-5px;}
+}

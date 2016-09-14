@@ -1,0 +1,318 @@
+@charset "UTF-8";
+ 
+ /* 
+ * Shared Web Templates - https://github.com/CaseWesternReserveUniversity/CaseTemplates/
+ * Case Western Reserve University
+ * (c) 2015
+ *
+ * Branch 0.9
+ * 7/15/2015
+ */
+
+/* Reset */
+html, body, address, footer, blockquote, dl, pre, span,  button, del, ins, map, object, abbr, acronym, b, bdo, big, cite, code, dfn, i, kbd, q, samp, small, sub, sup, tt, var, legend, fieldset  { 
+	font-family: 'Titillium Web', Helvetica, Arial, sans-serif;
+    color:#444;
+	margin:0; 
+	padding:0; 
+	line-height:1.4; 
+	font-weight:normal; 
+	font-size:1em; 
+} 
+
+
+a {color:#3168a6; text-decoration:none; cursor:pointer; }
+a:hover {text-decoration:underline; }
+a:visited, a:focus {text-decoration:none; outline:0 none; } 
+a img {border:0 none; } /* IE */
+
+/* Some default settings */
+body {background-color: #F5F5F5; }
+main { background-color: #FFF; } 
+
+/* Header elements revised in 
+	cd5c84c8f3f97c46caa49d746b5f98e52ffb9fb2 
+	91e599bcd342a07a2c496b0f2d815ec9a32ed662
+*/
+h1, h2, h3, h4, h5, h6 { margin:0; font-weight:600; }
+h1 { font-size:2em; }
+h2 { font-size:1.8em; margin: 10px 0;}
+h3 { font-size:1.6em; margin: 10px 0; }
+h4 { font-size:1.5em; margin: 5px 0;}
+h5 { font-size:1.4em; margin: 5px 0;}
+h6 { font-size:1.2em; margin: 5px 0; }
+.case-template-home h1.header-text, .home-header-text{ padding:15px;} /* Since this is a row, 15px margin looks great between the feature content. */
+.case-template-child h1.header-text, .child-header-text{ padding:5px 15px 0; } /* for the child pages put a small margin on the top, 0 for the breadcrumb and 15 px for the gutters */
+p, ul li { font-size: 1em; line-height: 1.5em; }
+blockquote { border-left: 3px solid #ccc; color:#666666; 	margin: 25px 0 25px 20px; padding-left: 15px;}
+img { margin: 3px 0 3px 3px; }
+.carousel img, .thumbnail img { margin: 0;}
+/* ************ */
+/* Containers   */
+/* ************ */
+.container { padding: 0px; } /* override the default style for fixed width containers */
+.container-fluid { }
+.container-fluid-case { 
+	width: 88.2%; 
+	/* to match bootstraps container classes */
+	margin-right: auto;
+	margin-left: auto;	
+ }
+
+/* ****** */
+/* HEADER */
+/* ****** */
+header { background-color:#0a304e; margin-bottom: 0px;} /* removed 3px margin bottom.*/
+header section { position: relative; }
+header .logo { margin-top:20px; }
+/* Site Title - This is the small box about the NAV that displays the site title */
+#site-title-row { margin-top: 60px; position: relative; } 
+#site-title {
+	display:block; 
+	background-color:#888;  
+	text-shadow:none; 
+	min-width:300px;
+	position: absolute;
+	bottom: 0px; /* cover the 3 px space between the nav bars; -3px removed because of commit 60b1a7bf2ed5ac754fc88611c4fdd779abe405a2*/
+	padding:7px 20px 8px 20px; 
+	color: #fff; 
+	font-size:20px; 
+	text-decoration:none;
+	/* Comment if you want to remove the animation */
+	-webkit-transition: all 0.2s ease 0s;
+       -moz-transition: all 0.2s ease 0s;
+         -o-transition: all 0.2s ease 0s;
+            transition: all 0.2s ease 0s; }
+
+
+#site-title:hover { background-color:#7d7d7d; padding-bottom: 10px;} /* the padding bottom here has to be greater than padding of #site-title */
+/* Top CWRU Links Menu */
+/* The Button Activator */
+/* NOTE header section is positioned as relative. This will allow the global menu toggle to be abs positioned within the header container.*/
+#global-menu-toggle { font-size:22px; text-align:center; position:absolute; right:0; top:15px; cursor:pointer; padding:5px 15px 8px 15px; z-index:1;}
+#global-menu-toggle-text { text-transform:lowercase; color:#ddd; }
+#global-menu-toggle .glyphicon, #global-menu-toggle .fa { color: #ddd; } 
+#global-menu-toggle.active .glyphicon, #global-menu-toggle.active .fa { color: #333; }
+#global-menu-toggle.active {background-color:rgba(255,255,255, 1); }
+#global-menu-toggle.active #global-menu-toggle-text { color:#333; } 
+/* The menu */
+.cwru-links ul { background-color:#fff; box-shadow: 0px 2px 1px rgba(0,0,0,.1), -3px 2px 2px rgba(0,0,0,.1), 2px 2px 2px rgba(0,0,0,.1); }
+.cwru-links li a { font-size:20px; color:#333; text-decoration:none; border-bottom:solid 1px #eee; 
+     -webkit-transition: All 0.3s ease-in-out;
+	    -moz-transition: All 0.3s ease-in-out;
+	     -ms-transition: All 0.3s ease-in-out;
+	      -o-transition: All 0.3s ease-in-out;
+	         transition: All 0.3s ease-in-out;
+}
+.cwru-links li a:hover {background-color:#eee; }
+
+
+
+
+
+
+/* This handles the list items under cwru links */
+.cwru-links { position:absolute; right:0; top:55px; z-index:999; width:20%; }
+.cwru-links ul { margin:0; padding:0; display:none; }
+.cwru-links li {margin:0; padding:0; list-style-type:none; }
+.cwru-links li:last-child a {border-bottom:0;  }
+.cwru-links li a {display:block; padding:13px 20px; }
+
+
+/* Search */
+.search { 
+	position:absolute; 
+	top:60px; 
+	right:0; 
+	z-index: 1; /* fixes issue 132 ecdc092*/
+	
+	/*margin-right:15px; */
+}
+.search input[type="text"] { 	
+	border: 0 none; 
+	width:150px; 
+	padding: 7px 45px 7px 10px; 
+	background: #ddd; 
+	font-size: 1.125em;
+	color: #333; 			
+    -webkit-transition: all 0.2s ease 0s;
+       -moz-transition: all 0.2s ease 0s;
+         -o-transition: all 0.2s ease 0s;
+            transition: all 0.2s ease 0s;
+    /*-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 1px rgba(0, 0, 0, 0.2) inset;
+       -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 1px rgba(0, 0, 0, 0.2) inset;
+            box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 1px rgba(0, 0, 0, 0.2) inset;*/
+	 }
+.search input[type="text"]:focus { 
+	width: 230px; 
+	background: #fff; 
+	font-size:18px; 
+	color: #333; 
+	 /* -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(0, 0, 0, 0.9) inset;
+       -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(0, 0, 0, 0.9) inset;
+            box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(0, 0, 0, 0.9) inset;
+             text-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);*/ 
+}
+			 
+.search button[name="sa"] {
+	background: none;
+	border: none;
+	position:absolute; 
+	right:10px; 
+	top:10px;	
+}
+	
+/* ****** */
+/* Content */
+/* ****** */
+.content, .content-sub {
+	margin: 0; 
+	/* removing this from the reset as it causes with issues with external theming frameworks 
+	Note the row class in bootstrap is margin: -15px 0;
+	color:#444;
+	margin:0; 
+	padding:0; 
+	line-height:1.4; 
+	font-weight:normal; 
+	font-size:20px; */
+}
+
+/* This is special since it is an aside it's within the .row element we have to handle "responsiveness" ourselves instead of adding another column*/	
+aside {float:right; width:32.5%; margin:3% 0 0 5%; background-color:#eee;}
+aside .aside-header { background-color:#0a304e; padding:9px 10px; display:block; color:white; font-weight:normal; text-transform:uppercase; border-radius:3px; }
+aside p { padding:10px; color:#666666; font-size:16px;  }	
+		
+/* Go to top little button if you scroll overflow-x */			 
+#back-top { 
+	display:none; 	
+	position:fixed; 
+	bottom:20px; 
+	right:10px; 
+	z-index:999; 	
+	padding:8px 18px;  	
+	background:#fff; 
+	text-decoration: none; 
+	color:#333; 
+	font-size:24px; *display:none; /* IE 7 */ 
+	border-radius:1px;	
+}
+#back-top:hover { background:#ddd; }
+#back-top span { background:none;
+	-webkit-transition: 2s;
+	   -moz-transition: 2s; 
+			transition: 2s; 
+}
+#back-top .glyphicon { color:#0a304e; }
+
+/* aside content is only on child pages */
+aside {background-color:#eee;}
+aside .aside-header {background-color:#0a304e; padding:9px 10px; display:block; color:white; font-weight:normal; text-transform:uppercase; border-radius:3px; }
+aside p {padding:10px; color:#666666; font-size:16px; } 
+
+img.banner { width: 100%; }
+
+/*add rss feed to sidebar menu*/
+ul.rss{list-style-type: none; padding: 0px; margin: 0px 0px 0px 10px;}
+ul.rss li{background-image: url(http://case.edu/images/arrow.png); background-repeat: no-repeat; background-position: 0px 15px; padding-left: 10px; margin-bottom: 0.5em; border-bottom:0;}
+ul.rss li span {font-size:0.9em; display:block; color:#888;}
+ul.rss li a:hover {color:#0a304e; text-decoration: none}
+
+/* Staff
+------------------------------- */
+.staff {background-color:#f1f1f1; overflow:auto; margin-bottom:35px; padding:10px; }
+.staff h4 {font-weight:normal; }
+.staff img {float:left; margin-right:20px; }
+.staff span {display:block; font-size:16px; }
+.staff .title {margin-bottom:10px; }
+
+/* on the child 1 -col and 2 col templates there are these floating thumbnails with content on the side
+these classes handle the padding for the text content next to the thumbnail. */
+article.thumbnail-content-left, article.thumbnail-content-right  { padding: 0 15px; }
+.thumbnail-list {
+	width: 200px;
+  	display: inline-block;
+   	 margin: 0 0.2em 0.3em;  	
+    *display: inline;
+    *zoom: 1;    
+    vertical-align: top;  
+}
+			 
+/* ****** */
+/* FOOTER */
+/* ****** */
+footer {
+	 /*margin-bottom:200px; Prevents issue #127 */
+}
+footer section {
+	color:#666; 
+	font-size:16px;
+	margin:0px auto; 
+	padding-top: 30px;
+	text-align:center;	
+}
+
+footer section.alt-footer {  /* applys a white to transparent gradient. */	
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+50&amp;1+0,0+50 */
+	background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(255,255,255,0) 50%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(50%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 50%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 50%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 50%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 50%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+}
+
+
+
+
+footer section address { color:#666; font-size:16px; font-style:normal; display:block; margin:15px 0;}
+footer section ul { margin:10px 0 0 0; padding:0; display:block; }
+footer section li { margin:0; padding:0; text-decoration:none;  display:inline-block; zoom: 1; *display: inline; }
+footer section li a { color:#666666; text-decoration:none; padding:5px 20px;  float:left; 
+     -webkit-transition: All 0.3s ease-in-out;
+	    -moz-transition: All 0.3s ease-in-out;
+	     -ms-transition: All 0.3s ease-in-out;
+	      -o-transition: All 0.3s ease-in-out;
+	         transition: All 0.3s ease-in-out; }
+footer section li a:hover {background:#ddd; text-decoration:none; }
+
+/* *******  */
+/* Helpers 	*/
+/* *******  */
+
+/************* IE Fixes ***********/
+/* Blank out the whole stupid page 
+.ie7 body { display: none; }
+*/
+
+/* Some smaller mods */
+/* this class adds some padding to the icon if next to some text */
+
+
+/* this is the light blue color in a hrefs */
+.cwrublue-link {
+	color: #3168A6;
+}
+
+.cwrublue {
+	color: #0a304e !important; /* RGB: R10, G48, B78 */
+}
+.cwrugrey, .cwrugray {
+	color: #626262 !important; /* RGB: R106, G106, B106 */
+}
+.cwrublue-background {
+	background-color: #0a304e; /* RGB: R10, G48, B78 */	
+}
+.cwrugray-background , .cwrugrey-background {
+	background-color: #626262;
+}
+
+
+span.highlight {background:#ffff00;} /* highlighter to help migration debugging. */
+
+/* BORDERS INBETWEEN CONTENT AREA ROWS */
+.top-border { border-top: 1px solid #EEE; padding-top: 10px; }
+.right-border { 	border-right: 1px solid #EEE; }
+.left-border { 	border-left: 1px solid #EEE; }
+.bottom-border { border-bottom: 1px solid #EEE; padding-bottom: 10px; } /* not used in the templates but added for completness */
+.nowrap { white-space: nowrap; }

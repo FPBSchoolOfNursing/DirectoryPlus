@@ -1,0 +1,59 @@
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--#include file="banner.shtml" --> 
+<!--#include file="../../local-resources/includes/meta-tags.shtml" --> 
+
+<!-- Fav and touch icons -->
+<!--#include file="../../local-resources/includes/favicon.shtml" -->  
+<link rel="apple-touch-icon" sizes="57x57" href="//case.edu/images/2014/favicons/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="//case.edu/images/2014/favicons/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="//case.edu/images/2014/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="//case.edu/images/2014/favicons/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="//case.edu/images/2014/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="//case.edu/images/2014/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="//case.edu/images/2014/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="//case.edu/images/2014/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="//case.edu/images/2014/favicons/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="//case.edu/images/2014/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="//case.edu/images/2014/favicons/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="//case.edu/images/2014/favicons/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="//case.edu/images/2014/favicons/favicon-16x16.png" sizes="16x16">
+<!-- andriod stuff 
+https://developers.google.com/web/updates/2014/11/Support-for-theme-color-in-Chrome-39-for-Android
+--> 
+<link rel="manifest" href="//case.edu/images/2014/favicons/android-chrome-manifest.json">
+<meta name="theme-color" content="#0a304e">
+<!-- windows pinning stuff -->
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-TileImage" content="//case.edu/images/2014/favicons/mstile-144x144.png">
+<meta name="msapplication-config" content="//case.edu/images/2014/favicons/browserconfig.xml">
+
+<link href='https://fonts.googleapis.com/css?family=Titillium+Web:200,200italic,300,300italic,400,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
+<!-- I am going to keep this in here just in case google fonts dies.
+<link rel="stylesheet" type="text/css" href="/case-templates/styles/titillium.min.css" >	   
+-->
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+<!-- Dev css -->
+<!-- Template Globals  
+<link rel="stylesheet" type="text/css" href="/case-templates/styles/main.new.css" >
+<link rel="stylesheet" type="text/css" href="/case-templates/styles/buttons.css" >
+<link rel="stylesheet" type="text/css" href="/case-templates/styles/bootstrap-override.css" >
+<link rel="stylesheet" type="text/css" href="/case-templates/styles/fpb.css" >
+<link rel="stylesheet" type="text/css" href="/case-templates/styles/smartphone-480px.css" >
+<link rel="stylesheet" type="text/css" href="/case-templates/styles/tablet-767px.css" >
+<link rel="stylesheet" type="text/css" href="/case-templates/styles/desktop-1024px.css" >
+<link rel="stylesheet" type="text/css" href="/case-templates/styles/desktop-1232px.css" >
+<link rel="stylesheet" type="text/css" href="/case-templates/styles/print.css" >-->
+
+<!-- 0.98 production  -->
+<link rel="stylesheet" type="text/css" href="/case-templates/styles/casetemplates.098.min.css" > 
+<!-- Local Styles that replace the case templates or add new style -->
+
+<link rel="stylesheet" type="text/css" href="/local-resources/styles/logo.095.css" >
+<!-- <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script> -->
+<script type="text/javascript" src="/local-resources/scripts/analytics.095.js"></script>

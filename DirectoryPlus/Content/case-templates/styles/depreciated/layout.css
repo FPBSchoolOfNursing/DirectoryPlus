@@ -1,0 +1,92 @@
+/* LAYOUT  --HOME
+------------------------------- */
+.col-wrap { overflow:auto; margin:0; padding:0; }
+
+
+/* 3-Column HOME
+------------------- */
+.col-3-home {overflow:auto; margin:40px 0 ; }
+.col-3-home .left-col, .col-3-home .mid-col {float:left; width:31%; margin-right:3.45%; }
+.col-3-home .right-col {float:right; width:31%;}
+.col-3-home .left-col img, .col-3-home .mid-col img, .col-3-home .right-col img { width:100% !important; margin-bottom:15px; display:block; }
+
+.bottom-2-col {margin:3.3% 0 0 0; overflow:auto; border-top:solid 1px #eee; padding-bottom:3.555%;  }
+.bottom-2-col .left-col p, .bottom-2-col .mid-col p, .bottom-2-col .right-col p { position:relative; }
+.bottom-2-col .left-col {float:left; width:49%;  border-right:solid 1px #eee; padding-top:4%; }
+.bottom-2-col .right-col {float:right; width:49%; padding-top:4%;  }
+/* this is orginally for the old icons, I am going to leave it here for real images next to text 0.3 */
+.bottom-2-col .left-col img, .bottom-2-col .right-col img {float:right; margin:30px 30px 30px 17px; }
+
+
+/* 2-Column HOME
+------------------- */
+.col-2-home {overflow:auto; margin:2.5% 0 0 0; }
+.col-2-home .left-col {position:relative; float:left; width:67%; border-right:solid 1px #eee; padding-right:2.1%; }
+.col-2-home .right-col {position:relative; float:right; width:28.3%;  padding:0 0 0 2%; }
+.col-2-home .right-col .slides {max-width:330px; }
+.col-2-home .left-col img { width:100%;}
+
+/* Gray bcknd columns --w/icons */
+.col-gray-bg .left-col, .col-gray-bg .mid-col, .col-gray-bg .right-col {width:28.4%; float:left; background-color:#f6f6f6; padding:3% 1.2% 5% 1.2%; display:block; text-align:center; border-top:solid 2px #eee; }
+.col-gray-bg .left-col, .col-gray-bg .mid-col {margin-right:3.5%;  }
+.col-gray-bg .left-col img, .col-gray-bg .mid-col img, .col-gray-bg .right-col img {max-width:130px; height:auto; }
+
+/* Gray bcknd columns --w/images */
+.col-gray-bg .left-col-img, .col-gray-bg .mid-col-img, .col-gray-bg .right-col-img {width:30.8%; float:left; background-color:#f6f6f6; padding-bottom:5%; display:block; text-align:center; border-top:solid 2px #eee;  }
+.col-gray-bg .left-col-img, .col-gray-bg .mid-col-img {margin-right:3.2%;  }
+.col-gray-bg .left-col-img img, .col-gray-bg .mid-col-img img, .col-gray-bg .right-col-img img {width:100%; height:auto; margin-bottom:25px; }
+.col-gray-bg .left-col-img p, .col-gray-bg .mid-col-img p, .col-gray-bg .right-col-img p {margin:0 2.4%; }
+
+/* white bcknd columns --w/images */
+.col-white-bg .left-col-img, .col-white-bg .mid-col-img, .col-white-bg .right-col-img {width:30.8%; float:left; background-color:#ffffff; padding-bottom:2%; display:block; text-align:left; border:solid 0px #eee;  }
+.col-white-bg .left-col-img, .col-white-bg .mid-col-img {margin-right:3.2%;  }
+.col-white-bg .left-col-img img, .col-white-bg .mid-col-img img, .col-white-bg .right-col-img img {width:100%; height:auto; margin-bottom:25px; }
+.col-white-bg .left-col-img p, .col-white-bg .mid-col-img p, .col-white-bg .right-col-img p {margin:0 2.4%; }
+.right-col-img-w {width:30.8%; float:left; background-color:#ffffff; padding-bottom:2%; display:block; text-align:left; border:solid 0px #eee; }
+
+/* Bottom Content */
+.bottom-content {border-top:solid 1px #eee; overflow:auto; padding:6% 0; margin-top:8%; }
+
+
+/* LAYOUT --SUB
+------------------------------- */
+
+/* Sidebars text size */
+.content-sub .left-col p, .content-sub .right-col p, .content-sub .left-col ul li, .content-sub .right-col ul li, .content-sub .left-col ul li a, .content-sub .right-col ul li a, .content-sub .left-col ol li, .content-sub .right-col ol li, .content-sub .left-col ol li a, .content-sub .right-col ol li a {font-size:17px; } 
+
+/* Side Bar Images */
+.content-sub .left-col .sideBarImg-text img, .content-sub .right-col .sideBarImg-text img {width:100%; } 
+.content-sub .left-col {float:left; width:22.5%;  padding:2% 2% 2% 0; }		
+.content-sub .right-col {float:right; width:22.5%; padding:2% 0 2% 0; }	
+
+.content-sub .mid-col {float:right; width:72.5%; border-left:solid 1px #eee; padding-left:2%; }
+/* Middle Column for 3 Column Subpage layout */
+.content-sub .mid-col-2 {float:left; width:48%; border-left:solid 1px #eee; border-right:solid 1px #eee; padding:0 1.333% 0 1.333%; }
+
+.mid-col aside {float:right; width:32.5%; background-color:#eee; margin:3% 0 0 5%;}
+.mid-col aside img {margin:0 0 0 5px; }
+.mid-col aside h5 {background-color:#0a304e; padding:9px 10px; display:block; color:white; font-weight:normal; text-transform:uppercase; border-radius:3px; }
+.mid-col aside p {padding:10px; color:#666666; font-size:16px; }
+
+/* Left column submenu */
+.sub-menu  ul {	margin:0 0 50px 0; padding:0 0 0 10px; }
+.sub-menu  li {margin:0; padding:0; list-style-type:none; }
+.sub-menu  li a {display:block; padding:11px 5px; font-size:16px !important; }
+.sub-menu  li a:hover { color:#333; text-decoration:none;  }
+.sub-menu  li.current { font-weight:600; background-color:#f6f6f6; border-left:1px solid #ddd; padding-left:10px }
+.sub-menu  li.current ul  {display:block; background-color:white; font-weight:normal; margin-bottom:20px;  }
+.sub-menu  li.current ul li a {color:#666666; padding:7px 0 0 15px; }
+
+.sub-menu .sec-title {display:block; padding:5px; }	
+.sub-menu .secSub-title  {display:block; padding:10px 0; font-weight:600; }	
+		
+.page-name  span {border-bottom:solid 1px #eee; font-weight:400; font-size:32px !important; padding:10px 0 20px 0; display:block;  }
+.content-sub article {clear:both; padding-bottom:30px;  }
+.content-sub article h1 {margin-bottom:20px; line-height:1.1; }
+
+/* Breadcrumb */
+/* Added padding: 0 in 0.3 to override bootstraps breadcrumb class */
+.breadcrumb {margin:2% 0 2% 0; color:#999; font-size:15px; background:none !important; padding: 0 !important;}
+.breadcrumb a img {box-shadow:none; }
+
+#home .home {border-bottom:solid 1px #0a304e; }

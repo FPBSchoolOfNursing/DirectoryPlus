@@ -1,0 +1,115 @@
+﻿<!doctype html>
+<!--[if IE 9 ]><html lang="en" class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+<!--<![endif]-->
+
+<head>
+    <title>Case Western Reserve University</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="57x57" href="//case.edu/images/2014/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="//case.edu/images/2014/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="//case.edu/images/2014/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="//case.edu/images/2014/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="//case.edu/images/2014/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="//case.edu/images/2014/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="//case.edu/images/2014/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="//case.edu/images/2014/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="//case.edu/images/2014/favicons/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="//case.edu/images/2014/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="//case.edu/images/2014/favicons/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="//case.edu/images/2014/favicons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="//case.edu/images/2014/favicons/favicon-16x16.png" sizes="16x16">
+
+    <link rel="manifest" href="//case.edu/images/2014/favicons/android-chrome-manifest.json">
+    <meta name="theme-color" content="#0a304e">
+    <!-- windows pinning stuff -->
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-TileImage" content="//case.edu/images/2014/favicons/mstile-144x144.png">
+    <meta name="msapplication-config" content="//case.edu/images/2014/favicons/browserconfig.xml">
+
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:200,200italic,300,300italic,400,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="//opensource.keycdn.com/fontawesome/4.6.3/font-awesome.min.css" integrity="sha384-Wrgq82RsEean5tP3NK3zWAemiNEXofJsTwTyHmNb/iL3dP/sZJ4+7sOld1uqYJtE" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="~/Content/case-templates/styles/casetemplates.098.min.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/case-templates/styles/logo.095.css">
+    <!-- -->
+    <link href="~/Content/theme/CaseLight/jquery-ui.structure.min.css" rel="stylesheet" />
+    <link href="~/Content/theme/CaseLight/jquery-ui.theme.min.css" rel="stylesheet" />
+
+    <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/cupertino/jquery-ui.css" />-->
+    <link href="~/Content/Guriddo_jqGrid_JS_5.1.0/css/ui.jqgrid.css" rel="stylesheet" />
+    <link href="~/Content/Guriddo_jqGrid_JS_5.1.0/css/ui.jqgrid-bootstrap.css" rel="stylesheet" />
+    @RenderSection("styles", required: false)
+    <link href="~/Content/styles/assignments-1.05.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- GLOBAL HEADER -->
+    <header>
+        <section class="container-fluid">
+            <a title="Case Western Reserve Home" class="img-responsive logo" href="http://case.edu"><span class="sr-only">Case Western Reserve University Logo</span></a>
+
+            <div id="site-title-row">
+                <a id="site-title" href="https://nursing.case.edu" role="banner">Frances Payne Bolton School of Nursing</a>
+            </div>
+        </section>
+    </header>
+
+    <main class="container-fluid">
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="navbar-header collapsed" data-toggle="collapse" data-target="#mobile-navbar-collapse">
+
+                <a id="mobile-nav-header" class="visible-xs text-center " href="#"><span class="fa fa-list fa-pad-right"></span>Navigation & Search</a>
+            </div>
+            <div class="collapse navbar-collapse" id="mobile-navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a id="assignmentslink" href="~/Assignment/Index">Assignments</a></li>
+                    <li><a id="courseslink" href="~/Courses/Index">Courses</a></li>
+                    <li><a id="utilizationlink" href="~/Utilization/Index">Utilization</a></li>
+
+                    <!--
+                    <li class="dropdown" title="Warning! The content type links are not maintained by this repo. They very well may break. Proceed with caution.">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span style="color:#daa520;" class="fa fa-warning fa-pad-right"></span>Content Types<span class="caret "></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="http://case.edu/webdev/t4-templates/HTML/sub/content-types/footer-alternate.html">Alternate Footer</a></li>
+                            <li><a href="http://case.edu/webdev/t4-templates/HTML/sub/content-types/accordion.html">Accordion</a></li>
+                            <li><a href="http://case.edu/webdev/t4-templates/HTML/sub/content-types/tabs.html">Tabs</a></li>
+                            <li><a href="http://case.edu/webdev/t4-templates/HTML/sub/content-types/gallery.html">Image Gallery</a></li>
+                            <li><a href="http://case.edu/webdev/t4-templates/HTML/sub/content-types/gallery-wide.html">1 column Image Gallery</a></li>
+                            <li><a href="http://case.edu/webdev/t4-templates/HTML/sub/content-types/rss.html">RSS Feeds</a></li>
+                        </ul>
+                    </li>
+                    -->
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>@Html.ActionLink("Logout", "Logout", "Account")</li>
+                </ul>
+            </div>
+        </nav>
+        @RenderBody()
+    </main>
+
+    <footer>
+        <section class="container-fluid alt-footer">
+            <address>&copy; 2016 Case Western Reserve University (<a title="Legal" href="//www.case.edu/legal.html" target="new">legal notice</a>)</address>
+        </section>
+    </footer>
+   
+    <script src="//code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+    <script src="//code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>    
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="~/Content/case-templates/scripts/casetemplates.097.min.js"></script>
+
+    @RenderSection("scripts", required: false)
+    <script src="~/Content/scripts/assignments-1.05.js"></script>
+    <script>
+        $(function () {
+        var controllerName = '@ViewContext.RouteData.Values["Controller"].ToString()';
+            switchActiveNav(controllerName);
+        });
+    </script>
+</body>
+</html>

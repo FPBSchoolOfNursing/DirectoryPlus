@@ -1,0 +1,6 @@
+/* Smartphone */
+@media screen and (max-width: 480px) {
+	header .logo { margin-top: 40px;} /* just a hack to see the stupid cwru links button */
+	footer address {font-size:90%; }
+	.container-fluid-case { width:95%; } /* resize the container */	
+}

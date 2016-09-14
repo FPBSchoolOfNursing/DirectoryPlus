@@ -1,0 +1,7 @@
+
+@media screen and (max-width: 1232px) {
+.desktop-nav li a { padding:19px 17px; font-size:75%; } 
+/* .desktop-nav ul.dropmenu a.toplevel.indicator { background: url(../images/arrow_down.png) no-repeat center 80%; } */
+#site-title { min-width:inherit;  }
+
+}

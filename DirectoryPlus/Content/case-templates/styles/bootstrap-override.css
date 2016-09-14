@@ -1,0 +1,549 @@
+/* BOOTSTRAP Overtide.
+ 0.90 7/15/2015
+ Ben Margevicius bdm4@case.edu
+ 
+ This Css is solely for the overriding of default bootstrap behaviors and styles. 
+ 
+---------------------------- 
+.panel-title a{ line-height:120%; }
+
+
+.sideBar-tabs .nav-tabs {background:#eee;  text-transform:uppercase; overflow:auto; margin:0 0 20px 0; padding:0; }
+.sideBar-tabs .nav-tabs li {margin:0; padding:0; width:50%;  list-style-type:none; float:left; }
+.sideBar-tabs .nav-tabs li a {color:#333; text-decoration:none; display:block; font-size:20px;   padding:10px;  }
+.sideBar-tabs .nav-tabs li a:hover { background-color: #ddd; }
+
+
+.FiveCol-tabs .nav-tabs {background:#eee;  text-transform:uppercase; overflow:auto; margin:0 0 20px 0; padding:0; }
+.FiveCol-tabs .nav-tabs li {margin:0; padding:0; width:20%;  list-style-type:none; float:left;  text-align:center;}
+.FiveCol-tabs .nav-tabs li a {color:#3168a6; ; text-decoration:none; display:block; font-size:80%;   padding:15px;  }
+.FiveCol-tabs .nav-tabs li a:hover { background-color: #ddd; }
+
+
+.nav-tabs > .active  { cursor: default; border-bottom-color: transparent; background-color: #ccc; }
+.tab-content { overflow: auto; }
+.tabs-below > .nav-tabs,
+.tabs-right > .nav-tabs,
+.tabs-left > .nav-tabs {
+  border-bottom: 0;
+}
+
+.tab-content > .tab-pane,
+.pill-content > .pill-pane {
+  display: none;
+}
+
+.tab-content > .active,
+.pill-content > .active {
+  display: block;
+}
+
+.tabs-below > .nav-tabs {
+  border-top: 1px solid #ddd;
+}
+
+.tabs-below > .nav-tabs > li {
+  margin-top: -1px;
+  margin-bottom: 0;
+}
+
+.tabs-below > .nav-tabs > li > a {
+  -webkit-border-radius: 0 0 4px 4px;
+     -moz-border-radius: 0 0 4px 4px;
+          border-radius: 0 0 4px 4px;
+}
+
+.tabs-below > .nav-tabs > li > a:hover,
+.tabs-below > .nav-tabs > li > a:focus {
+  border-top-color: #ddd;
+  border-bottom-color: transparent;
+}
+
+.tabs-below > .nav-tabs > .active > a,
+.tabs-below > .nav-tabs > .active > a:hover,
+.tabs-below > .nav-tabs > .active > a:focus {
+  border-color: transparent #ddd #ddd #ddd;
+}
+
+.tabs-left > .nav-tabs > li,
+.tabs-right > .nav-tabs > li {
+  float: none;
+}
+
+.tabs-left > .nav-tabs > li > a,
+.tabs-right > .nav-tabs > li > a {
+  min-width: 74px;
+  margin-right: 0;
+  margin-bottom: 3px;
+}
+
+.tabs-left > .nav-tabs {
+  float: left;
+  margin-right: 19px;
+  border-right: 1px solid #ddd;
+}
+
+.tabs-left > .nav-tabs > li > a {
+  margin-right: -1px;
+  -webkit-border-radius: 4px 0 0 4px;
+     -moz-border-radius: 4px 0 0 4px;
+          border-radius: 4px 0 0 4px;
+}
+
+.tabs-left > .nav-tabs > li > a:hover,
+.tabs-left > .nav-tabs > li > a:focus {
+  border-color: #eeeeee #dddddd #eeeeee #eeeeee;
+}
+
+.tabs-left > .nav-tabs .active > a,
+.tabs-left > .nav-tabs .active > a:hover,
+.tabs-left > .nav-tabs .active > a:focus {
+  border-color: #ddd transparent #ddd #ddd;
+  *border-right-color: #ffffff;
+}
+
+.tabs-right > .nav-tabs {
+  float: right;
+  margin-left: 19px;
+  border-left: 1px solid #ddd;
+}
+
+.tabs-right > .nav-tabs > li > a {
+  margin-left: -1px;
+  -webkit-border-radius: 0 4px 4px 0;
+     -moz-border-radius: 0 4px 4px 0;
+          border-radius: 0 4px 4px 0;
+}
+
+.tabs-right > .nav-tabs > li > a:hover,
+.tabs-right > .nav-tabs > li > a:focus {
+  border-color: #eeeeee #eeeeee #eeeeee #dddddd;
+}
+
+.tabs-right > .nav-tabs .active > a,
+.tabs-right > .nav-tabs .active > a:hover,
+.tabs-right > .nav-tabs .active > a:focus {
+  border-color: #ddd #ddd #ddd transparent;
+  *border-left-color: #ffffff;
+}
+*/
+/* size of the input bar for mobile mode search */
+#mobile-search-text {
+	/*height: 36px; */
+}
+
+/* media row list can be seen on home pages */
+.row.media-list { 
+	margin-top:8%;
+	overflow:auto;
+	padding:6% 0;
+}
+.breadcrumb { 
+	background-color: #FFFFFF; /* Background color of the breadcrumbs only shows on child pages. */
+	margin-bottom: 0px; /* Bootstrap has a 20px bottom margin. Let's remove that */
+} 
+
+
+/******************* Thumbnails ***********************/
+.thumbnail-case {padding: 0; border: none; border-radius: 0; max-width: 300px;} /* NOTE: This might have to change based on the img width. This is a partial fix for #76 */
+.thumbnail-case .caption { 	
+	text-align: center;
+	word-wrap: break-word;		
+	background-color: #DDDDDD;	
+	font-size: 70%;
+}
+/* When displaying the thumbnail captions make sure they are 100% container + padding */
+@media screen and (max-width: 767px) {
+	.thumbnail-case  { max-width: none; }
+}
+
+/******************* CAROUSEL/IMAGE ROTATER MODS ***********************/
+.carousel.small-carousel { /* for the small feature, we need padding on the bottom*/
+  margin-bottom: 1.5%; /*matches padding for content.*/ 
+}
+ .carousel-inner > .item > img, .carousel-inner > .item > a > img,
+ .carousel-inner > .item > span > img, .carousel-inner > .item > a > span > img { /*spans are for t4 media library images */
+    width: 100%; /* makes the image 100% width */
+	/*margin: 0 auto;  center image? */
+ }
+ 
+/* Mimic cases captioning in bootstraps carousel */
+.carousel-caption.case-carousel-caption {
+  left:0;
+  right:0;
+  bottom:0;
+  
+  z-index: 10;
+  color: #fff;
+  text-align: left; 
+ 
+  padding: 0.7em;	
+  background-color:rgba(10,48,78, .9); 
+  *background-color:#0a304e; 
+  font-size:1.5rem; /* consider changing the font size. if not here maybe in the media queries below. * /
+  /*text-shadow: 0 1px 2px rgba(0, 0, 0, .6);*/
+}
+/* Mimic cases captioning in bootstraps carousel, for mobile views change the size so things are visable. */
+@media screen and (max-width: 480px) {
+	.carousel-caption.case-carousel-caption {		 
+		font-size: 0.8rem; 
+	}
+}
+@media screen and (min-width: 480px) and (max-width: 768px) {
+	.carousel-caption.case-carousel-caption {		
+		font-size: 0.85rem; 
+	}
+}
+@media screen and (min-width: 767px) and (max-width: 992px) {
+	.carousel-caption.case-carousel-caption {		
+		font-size: 1.0rem; 
+	}
+}
+@media screen and (min-width: 992px) {
+	.carousel-caption.case-carousel-caption {		
+		font-size: 1.2rem; 
+	}
+}
+
+
+/******************* LEFT NAV BAR MODS ***********************/
+/** on the child 2 column and 3 column we'll use the nav pills **/
+#leftnav.nav-pills > li.active > a,
+#leftnav.nav-pills > li.active > a:hover,
+#leftnav.nav-pills > li.active > a:focus {
+	background-color: #F6F6F6;
+    color:#3168A6;
+	cursor:pointer;
+	text-decoration:none;
+	border-left: 1px solid #ddd;
+}
+#leftnav.nav-pills > li { }
+#leftnav.nav-pills > li a:hover { color: black; background-color: white;}
+#leftnav.nav-pills > li > a { border-radius: 0; font-size: 17px;}
+
+/* Right side navigation pillbox looks a little different than the left side. 
+old css from main.css.
+
+// Sidebar Elements
+------------------------------- //
+// Section Title //
+.sideBar-section-title { display:block; background:#eee; font-size:18px; font-weight:normal; padding:15px 10px; text-transform:uppercase; }
+// Unordered List //
+.sideBar-u-list {margin:10px 0 50px 0; }
+.sideBar-u-list ul {margin:0 0 0 7px; padding:0; }
+.sideBar-u-list ul li {padding:9px 5px; display:block; list-style-type:none;  border-bottom:dotted 1px #eee; font-size:18px;  }
+
+// Ordered List //
+.sideBar-o-list {margin:10px 0 50px 0; padding:0;}
+.sideBar-o-list ol {margin:0 0 0 26px; padding:0; }
+.sideBar-o-list ol li {padding:9px 5px; border-bottom:dotted 1px #eee;  }
+
+// Calendar Feed //
+.sideBar-cal-list {margin:10px 0 50px 0; }
+.sideBar-cal-list ul {margin:0 0 0 7px; padding:0; }
+.sideBar-cal-list ul li {padding:8px 5px; display:block; list-style-type:none;  border-bottom:dotted 1px #eee; font-size:17px; overflow:auto;  }
+.sideBar-cal-list ul li div {float:left; text-align:center; margin-right:10px; border:solid 1px #eee; }
+.sideBar-cal-list ul li div span {display:block; font-weight:300; width:50px; }
+.sideBar-cal-list ul li div .month { font-size:13px; background:#0a304e; color:white; }
+.sideBar-cal-list ul li div .day { font-size:25px;  }
+.sideBar-cal-list .cal-link {display:block; font-size:16px; margin:15px 18px; }
+
+// SideBar Image + Text //
+.sideBarImg-text {margin:10px 0 50px 0;}
+.sideBarImg-text h4 {margin-top:10px 0 ; }
+.sideBarImg-text p {margin-top:0; }
+
+//Sidebar menu //
+.sidebar-menu {margin:0 0 30px 0; padding:0; }
+.sidebar-menu ul {margin:0; padding:0; }
+.sidebar-menu li {margin:0; padding:0; list-style-type:none; background-color:#eee; }
+.sidebar-menu li a {display:block; padding:20px; text-decoration:none;  outline:none; border-bottom:solid 1px white }
+.sidebar-menu li a:hover {background:rgba(204,204,204,.1); border-right:solid 1px #0a304e; }
+.sidebar-menu li a:visited, .sidebar-menu li a:focus { outline:none; } 
+***/
+
+/* I don't think active state is ever used for the right nav. 
+#rightnav.nav-pills > li.active > a, 
+#rightnav.nav-pills > li.active > a:hover, 
+#rightnav.nav-pills > li.active > a:focus {
+	background-color: #F6F6F6;
+    color:#3168A6;
+	cursor:pointer;
+	text-decoration:none;
+	border-left: 1px solid #ddd;
+}
+*/
+
+/* gray style right navs */
+#rightnav.nav-pills.gray-nav > li { 
+	background-color:#eee; 	
+}
+#rightnav.nav-pills.gray-nav > li a:hover 
+{ 
+	background:rgba(204,204,204,.1); 
+	border-right:solid 1px #0a304e; 	
+}
+
+#rightnav.nav-pills.gray-nav > li > a > .glyphicon
+#rightnav.nav-pills.gray-nav > li > a > .fa {
+	color: #626262;	
+}
+
+/* blue style right navs */ 
+#rightnav.nav-pills.blue-nav > li a { /* override the default visited color of grey? see #128,  */		 
+	background-color:#0a304e; 	
+}
+#rightnav.nav-pills.blue-nav > li a:hover  
+{
+	background-color:#0e446e;
+	border-right:solid 5px #a5a5a5;	/* this is my own flair */ 
+}
+#rightnav.nav-pills.blue-nav> li > a {		
+	color: #eee;
+}
+#rightnav.nav-pills.blue-nav > li > a > .glyphicon ,
+#rightnav.nav-pills.blue-nav > li > a > .fa {
+	color: #a5a5a5;	
+}
+
+/*default styles for all right navs */
+
+#rightnav.nav-pills > li > a  {
+	border-radius: 0; 
+	font-size: 17px;	
+}
+#rightnav.nav-pills > li > a > .glyphicon, 
+#rightnav.nav-pills > li > a > .fa {
+	font-size: 1.25em; /* 20px */	
+	margin-right: 15px;	
+	top: 4px; /* pseudo centering of the icons and the text. if you don't like this please comment this out. */	
+}
+
+/*used to stick to the top of the screen, see scripts.js */
+.navbar-fixed-top-override 
+{
+	position: fixed;
+    top: 0px;
+	z-index: 1030; /* default from bootstrap. */
+}
+
+
+/*default navbar style*/
+nav.navbar { 
+	margin-bottom: 0;
+	border:0; 
+	background:#E5E5E5; 
+
+	/* bootstrap override cornering of the nav bar */
+	-webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    border-radius: 0 !important;		 
+}
+
+/* since the header is now completly clickable add a pointer to the whole header */
+nav .navbar-header {
+	cursor: pointer;
+}
+
+/* this is a weird exception. The mobile header is only explicitly shown in mobile mode. There for media query isn't needed. */
+#mobile-nav-header {
+  font-weight:600;
+  padding:13px 0;   
+  text-shadow:#FFFFFF 1px 1px 1px;
+}
+
+.nav.navbar-nav > li > a {	
+	  border-right-color:rgba(255, 255, 255, 0.298039);
+	  border-right-style:solid;
+	  border-right-width:1px;	  	  
+	  
+	  display:block;
+	  color:#0A304E;
+	  font-size:16px;
+	  font-weight:600;
+	  padding:20px 22px;
+	  text-decoration:none;		 
+}
+
+.nav.navbar-nav > li > a.active { /* if the navbar item is active change its background color */
+	background: #eee;
+}
+
+
+/* dropdown menu styles */
+.dropdown-menu > li  > a {		
+	word-wrap: break-word; 
+	white-space: normal;	
+	margin:0; 
+	font-weight:400; 
+	text-shadow:none;  
+	font-size: 16px;	
+	color:#0A304E;
+	
+	/* added transition to match the cwru links and footer links. */
+	-webkit-transition: all 300ms ease-in-out;
+	    -moz-transition: all 300ms ease-in-out;
+	     -ms-transition: all 300ms ease-in-out;
+	      -o-transition: all 300ms ease-in-out;
+	         transition: all 300ms ease-in-out;
+}
+.dropdown-menu > li  > a:hover {	
+	background: #eee !important;	/* The drop down menu transition to this color */		
+}
+
+/* desktop mode only NAV css */
+@media screen and (min-width: 767px) {
+	.dropdown-menu > li  > a {
+		padding: 20px 5px 20px 20px;
+		width:220px; /* the width only applies to desktop mode. */
+	}
+	
+	.dropdown-menu > li > a.smaller-menu { /* if you want a smaller menu item set use the .smaller-menu class on the menu items. */
+		padding: 5px 5px 5px 20px;
+	}
+	
+	nav.navbar div.container-fluid, nav.navbar div.collapse {
+		padding-left: 0 !important; /*if in desktop mode remove container padding, otherwise the leftest element won't be on the leftest ;) */
+	}
+	
+	/* OPEN is induced by bootstrap on open dd element. */ 	 
+	.open .dropdown-toggle  {
+		background: #fff !important;		
+	 }
+	
+	/* NOTE don't apply transistions to the mobile menu. */
+	.open > .dropdown-menu {
+		-webkit-transform: scale(1, 1);
+		-moz-transform: scale(1, 1);
+		-ms-transform: scale(1, 1);
+		-o-transform: scale(1, 1);
+		transform: scale(1, 1); /* rotateX(0deg); */
+		opacity:1;			
+		/* there are many cool things we can do with the menu here. 3d fx and the like */ 
+	}
+	
+	/* this will simulate a drop down animation. */
+	.dropdown-menu {		
+		-webkit-transform-origin: top; /* 50% 0; */
+		-moz-transform-origin: top;
+		-ms-transform-origin: top;
+		-o-transform-orgin: top;
+		transform-origin: top;
+		
+		-webkit-animation-fill-mode: forwards;  
+		-moz-animation-fill-mode: forwards; 
+		-ms-animation-fill-mode: forwards; 
+		-o-animation-fill-mode: forwards; 
+		animation-fill-mode: forwards;
+		 
+		-webkit-transform: scale(1, 0);	/* rotateX(90deg); */
+		-moz-transform: scale(1, 0);
+		-ms-transform: scale(1, 0);
+		-o-transform: scale(1, 0);
+		transform: scale(1, 0);		
+		/* opacity: 0; */ 
+		-webkit-transition: all 0.25s ease;
+		-moz-transition: all 0.25s ease;
+		-ms-transition: all 0.25s ease;
+		-o-transition: all 0.25s ease;
+		transition: all 0.25s ease;
+		/* transform-style: preserve-3d; */
+		display: block;		
+	}
+		
+	/* IE8 hacks for the menu */
+	.ie9 .dropdown-menu {
+		display:none;
+	}
+	.ie9 .open > .dropdown-menu {
+		display:block;
+	}		
+}
+
+/* mobile mode menu styling, mocked from t4*/
+@media screen and (max-width: 767px) {
+	.nav.navbar-nav > li > a {
+		/*background:#ddd;*/
+		border-bottom-color:#bbb;
+		border-bottom-style:solid;
+		border-bottom-width:1px;
+		border-top-color:#fff;
+		border-top-style:solid;
+		border-top-width:1px;
+		
+		font-weight:600;
+		padding:10px 15px;		
+	}
+		
+	.dropdown-menu > li  {			
+	  border-bottom-color:#bbb;
+	  border-bottom-style:dotted;
+	  border-bottom-width:1px;	
+	  background: #fff;
+	  
+	  	  
+	}	
+	/* not right the css markup should be reevaluated to make it more robust. This is just hacked to make it work :(.
+		This will achieve the same hover effect as the desktop drop down menu. However I have to mark things important to override some defaults.
+		commit: ecbefcad7c98975a204c1b8e6dd05786e722e5fe
+	 */	
+	.dropdown-menu > li > a {
+		border: 0;		
+		padding: 10px 25px !important;	
+		color:#0A304E !important;	
+		font-size: 1em; /*The font size was changed to 1em. This looks ok on mobile and m*/		
+	}
+}
+
+/* NAVBAR AS TABS */
+.nav.nav-tabs {
+	background:#E5E5E5;
+}
+
+.nav.nav-tabs > li {
+	
+}
+.nav.nav-tabs > li > a {
+	border-radius: none;
+	 color:#0A304E !important;
+	  font-size:16px;
+	  font-weight:600;
+	  padding:18px 20px;
+	  text-decoration:none;	
+}
+
+@media screen and (max-width: 767px) {
+	.nav.nav-tabs > li > a {
+		padding:10px 12px;
+	}
+}
+
+/******************* MODAL MODS **********************
+Bootstrap 3.3.4 change how modals work, see issue #99 in the github tracker and the modals demo in the /demo/ directory .
+If you want to change the default backrop color 
+.modal-backdrop { background-color: #fff; }
+*/
+.modal-backdrop {
+	background-color: #0A304E;
+}
+
+.modal-backdrop.modal-case {
+  background-color: #0A304E;
+}
+.modal-backdrop.modal-warning {
+  background-color: #DAA520;
+}
+.modal-backdrop.modal-error {
+  background-color: red;
+}
+/* ******/
+/* ICONS*/
+/* ******/
+.glyphicon, .fa { color: #626262; } /* make all the icons cwru gray */
+.glyphicon-larger-icon { font-size: 1.25em; }
+.glyphicon-menu-icon { font-size: 0.95em; }
+.glyphicon-pad-right, .fa-pad-right { padding-right: 4px; }
+.glyphicon-pad-left, .fa-pad-left { padding-left: 4px; }
+.glyphicon-fw { width: 1.28571429em; text-align: center; }
+.breadcrumb .glyphicon.glyphicon-home{ font-size: 0.75em; }
+.aside-calendar-icon  { font-size: 3.0em; padding-left: 5px; }
