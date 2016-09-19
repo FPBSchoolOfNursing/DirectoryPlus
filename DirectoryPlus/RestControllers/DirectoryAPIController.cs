@@ -4,11 +4,16 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using CasAuthenticationMiddleware.Attributes;
 
 namespace DirectoryPlus.RestControllers
 {
+    [RoutePrefix("directory")]
     public class DirectoryAPIController : ApiController
     {
+        
+        //[ADAuthorize("ads.case.edu", "nurs-dept-it")]
+      
         // GET api/<controller>
         public IEnumerable<string> Get()
         {
