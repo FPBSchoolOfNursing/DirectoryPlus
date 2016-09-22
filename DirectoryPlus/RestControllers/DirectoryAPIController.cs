@@ -5,21 +5,56 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using CasAuthenticationMiddleware.Attributes;
+using DirectoryPlus.DataContexts;
+using System.Web;
+using Microsoft.AspNet.Identity.Owin;
 
 namespace DirectoryPlus.RestControllers
 {
+
+    //Route prefix dox: http://www.asp.net/web-api/overview/web-api-routing-and-actions/attribute-routing-in-web-api-2
     [RoutePrefix("directory")]
+    //[ADAuthorize("ads.case.edu", "nurs-dept-it")]
     public class DirectoryAPIController : ApiController
     {
-        
-        //[ADAuthorize("ads.case.edu", "nurs-dept-it")]
-      
-        // GET api/<controller>
-        public IEnumerable<string> Get()
+        private DirectoryContext db;
+        public DirectoryAPIController()
         {
+            //throw new NotImplementedException("Please don't use the default contructor");
+        }
+        public DirectoryAPIController(DirectoryContext DBContext)
+        {
+            DirectoryDBContext = DBContext;
+        }
+
+        public DirectoryContext DirectoryDBContext
+        {
+            get { return db ?? HttpContext.Current.GetOwinContext().Get<DirectoryContext>(); }
+            private set { db = value; }
+        }
+                                
+        [Route("{aliasOrAdGroup}/{query}")]
+        public IEnumerable<string> GetDirectory(string aliasOrAdGroup, string query)
+        {
+            /* Return directory information for an Alias (see GetAliases() ) or an Ad Group Eg staff@nursing.case.edu or nursing 
+             * 
+             * */
             return new string[] { "value1", "value2" };
         }
 
+        [Route("Aliases")]
+        public IEnumerable<string> GetAliases()
+        {
+            /*Returns a list of aliases 
+             * 
+             * An alias is a pointer to a group of adgroups E.g.
+             * Nursing = faculty@nursing.case.edu, staff@nursing.case.edu
+             * 
+             * */
+           
+            return new string[] { "Nursing", "UTech", "Adalbert Hall" };
+        }
+        /*
         // GET api/<controller>/5
         public string Get(int id)
         {
@@ -40,5 +75,6 @@ namespace DirectoryPlus.RestControllers
         public void Delete(int id)
         {
         }
+        */
     }
 }

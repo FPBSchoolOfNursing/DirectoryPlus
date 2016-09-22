@@ -5,3 +5,12 @@
 
 <h2>Index</h2>
 
+@section scripts {
+    <script>
+        $(function () {
+            $.get("/directory/Aliases", function (data) {
+                console.log(data);
+            });
+        });
+    </script>
+}
