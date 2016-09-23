@@ -17,9 +17,10 @@ namespace DirectoryPlus.Services
             _context = context;
         }
 
-        public bool SyncLocalDb(string AdGroup)
+        public bool SyncLocalDb(string ADDomain, string ADGroup)
         {
-            bool inSync = false;            
+            bool inSync = false;
+            ActiveDirectory.UsersInGroup(ADDomain, ADGroup);     
             //query active directory for the people in AdGroup
             //update the records for those people. 
             return inSync;

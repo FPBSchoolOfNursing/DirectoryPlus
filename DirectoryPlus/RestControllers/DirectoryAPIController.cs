@@ -8,6 +8,7 @@ using CasAuthenticationMiddleware.Attributes;
 using DirectoryPlus.DataContexts;
 using System.Web;
 using Microsoft.AspNet.Identity.Owin;
+using DirectoryPlus.Services;
 
 namespace DirectoryPlus.RestControllers
 {
@@ -18,6 +19,8 @@ namespace DirectoryPlus.RestControllers
     public class DirectoryAPIController : ApiController
     {
         private DirectoryContext db;
+        private string adDomain = "ads.case.edu";
+
         public DirectoryAPIController()
         {
             //throw new NotImplementedException("Please don't use the default contructor");
@@ -58,9 +61,8 @@ namespace DirectoryPlus.RestControllers
         [Route("Sync/{aliasOrAdGroup}")]
         public void GetSync(string aliasOrAdGroup)
         {
-            
-
-
+            var adservice = new ActiveDirectoryService(DirectoryDBContext);
+            adservice.SyncLocalDb(adDomain, aliasOrAdGroup);
         }
 
 

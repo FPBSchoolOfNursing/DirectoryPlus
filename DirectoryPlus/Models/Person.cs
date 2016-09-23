@@ -19,16 +19,6 @@ namespace DirectoryPlus.Models
         public string Title { get; set; }
         public DateTime LastModified { get; set; }
         public virtual List<Office> Offices { get; set; }
-     }
-
-    public class Office
-    {
-        public int Number { get; set; }
-        public string Building { get; set; }
-        public string PhoneNumber { get; set; }
-        public float SquareFeet { get; set; }
-        public string Longitude { get; set; }
-        public string Latitude { get; set; }
-        public string Elevation { get; set; }
     }
+
 }
