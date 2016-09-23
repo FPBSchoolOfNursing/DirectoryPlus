@@ -51,9 +51,20 @@ namespace DirectoryPlus.RestControllers
              * Nursing = faculty@nursing.case.edu, staff@nursing.case.edu
              * 
              * */
-           
+
             return new string[] { "Nursing", "UTech", "Adalbert Hall" };
         }
+
+        [Route("Sync/{aliasOrAdGroup}")]
+        public void GetSync(string aliasOrAdGroup)
+        {
+            
+
+
+        }
+
+
+
         /*
         // GET api/<controller>/5
         public string Get(int id)
