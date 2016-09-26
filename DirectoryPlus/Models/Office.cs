@@ -14,5 +14,7 @@ namespace DirectoryPlus.Models
         public string Longitude { get; set; }
         public string Latitude { get; set; }
         public string Elevation { get; set; }
+
+        public virtual ICollection<Person> People { get; set; }
     }
 }

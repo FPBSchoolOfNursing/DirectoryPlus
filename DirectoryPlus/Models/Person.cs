@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -7,10 +8,11 @@ namespace DirectoryPlus.Models
 {
     public class Person
     {
-        public int PersonID { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public string CaseUserID { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public string CaseUserID { get; set; }
+       
         public string PhoneNumber { get; set; }
         public string ImageURL { get; set; }
         public string HomePageURL { get; set; }
@@ -18,7 +20,9 @@ namespace DirectoryPlus.Models
         public string Suffix { get; set; }
         public string Title { get; set; }
         public DateTime LastModified { get; set; }
-        public virtual List<Office> Offices { get; set; }
+        public virtual ICollection<PersonRole> Roles { get; set; }       
+        public virtual ICollection<Group> Groups { get; set; }        
+        public virtual ICollection<Office> Offices { get; set; }
     }
 
 }
