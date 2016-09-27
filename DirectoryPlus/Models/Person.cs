@@ -9,7 +9,8 @@ namespace DirectoryPlus.Models
     public class Person
     {
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public string CaseUserID { get; set; }
+        
+        public string CaseUserId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
        

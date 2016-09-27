@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -7,7 +9,10 @@ namespace DirectoryPlus.Models
 {
     public class Office
     {
-        public int Number { get; set; }
+       
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int OfficeId { get; set; }
+        public string RoomNumber { get; set; }
         public string Building { get; set; }
         public string PhoneNumber { get; set; }
         public float SquareFeet { get; set; }
