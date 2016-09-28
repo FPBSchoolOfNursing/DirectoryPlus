@@ -189,6 +189,7 @@
     </Compile>
     <Compile Include="Interfaces\IDirectoryContext.cs" />
     <Compile Include="Interfaces\IRepository.cs" />
+    <Compile Include="Models\DirectoryReturn.cs" />
     <Compile Include="Models\Group.cs" />
     <Compile Include="Models\Office.cs" />
     <Compile Include="Models\Person.cs" />

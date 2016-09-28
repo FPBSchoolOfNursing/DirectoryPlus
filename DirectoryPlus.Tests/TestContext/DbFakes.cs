@@ -12,7 +12,7 @@ namespace DirectoryPlus.Tests.TestContext
             {
                 new Person
                 {
-                     CaseUserID = "abc123",
+                     CaseUserId = "abc123",
                       FirstName = "Alice",
                        LastName = "Crushe",
                         Title="SysOp",

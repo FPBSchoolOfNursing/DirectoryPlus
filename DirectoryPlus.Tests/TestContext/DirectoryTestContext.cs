@@ -21,10 +21,17 @@ namespace DirectoryPlus.Tests.TestContext
         public DirectoryTestContext() {
             this.People = new TestDbSet<Person>();
             this.Offices = new TestDbSet<Office>();
+            this.Groups = new TestDbSet<Group>();
+            this.Roles = new TestDbSet<PersonRole>();
         }
+
+        public DbSet<Group> Groups { get; set; }
 
         public DbSet<Office> Offices { get; set; }
         public DbSet<Person> People { get; set; }
+
+        public DbSet<PersonRole> Roles { get; set; }
+
 
         public int SaveChangesCount { get; private set; }
         public int SaveChanges()

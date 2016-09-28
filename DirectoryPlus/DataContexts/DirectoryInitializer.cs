@@ -20,8 +20,9 @@ namespace DirectoryPlus.DataContexts
             context.SaveChanges();
 
             var office = new List<Office> {
-                new Office { Building = "Nursing", RoomNumber="219G" },
-                new Office { Building = "Wood", RoomNumber="215" },
+                new Office { CaseUserId = "abc123", Building = "Nursing", RoomNumber="219G" },
+                new Office { CaseUserId = "abc124", Building = "Nursing", RoomNumber="219G" },
+                new Office { CaseUserId = "abc1250", Building = "Wood", RoomNumber="215" },
                 new Office { Building = "Nursing", RoomNumber="1115" },
                 new Office { Building = "MiddleEarth", RoomNumber="NOB150" },
             };

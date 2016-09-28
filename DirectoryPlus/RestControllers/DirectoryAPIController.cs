@@ -9,6 +9,7 @@ using DirectoryPlus.DataContexts;
 using System.Web;
 using Microsoft.AspNet.Identity.Owin;
 using DirectoryPlus.Services;
+using DirectoryPlus.Models;
 
 namespace DirectoryPlus.RestControllers
 {
@@ -36,13 +37,24 @@ namespace DirectoryPlus.RestControllers
             private set { db = value; }
         }
                                 
-        [Route("{aliasOrAdGroup}/{query}")]
-        public IEnumerable<string> GetDirectory(string aliasOrAdGroup, string query)
+        [Route("{aliasOrAdGroup}/{query?}")]
+        public IEnumerable<DirectoryReturn> GetDirectory(string aliasOrAdGroup, string query = null)
         {
             /* Return directory information for an Alias (see GetAliases() ) or an Ad Group Eg staff@nursing.case.edu or nursing 
              * 
              * */
-            return new string[] { "value1", "value2" };
+            var directory = (from p in DirectoryDBContext.People
+                             join o in DirectoryDBContext.Offices on p.CaseUserId equals o.CaseUserId
+                             select new DirectoryReturn
+                             {
+                                 Name = p.FirstName + " " + p.LastName,
+                                 Email = p.CaseUserId + "@case.edu",
+                                 Location = o.Building + " " + o.RoomNumber,
+                                 PersonPhone = p.PhoneNumber,
+                                 OfficePhone = o.PhoneNumber
+                             });
+
+            return directory.ToList();
         }
 
         [Route("Aliases")]
