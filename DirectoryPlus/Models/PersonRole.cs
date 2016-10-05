@@ -9,8 +9,9 @@ namespace DirectoryPlus.Models
     public class PersonRole
     {
         [Key]
-        public string CaseUserId { get; set; }
+        public int RoleId { get; set; }       
         public string Role { get; set; }
+        public DateTime Expires { get; set; }
         public virtual Person Person { get; set; }
     }
 }
