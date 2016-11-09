@@ -467,7 +467,7 @@
     <Content Include="Components\scss\main.scss" />
     <Content Include="Components\scss\_variables.scss" />
     <Content Include="Components\scss\_fonts.scss" />
-    <Content Include="Components\scss\base.scss" />
+    <Content Include="Components\scss\_base.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
