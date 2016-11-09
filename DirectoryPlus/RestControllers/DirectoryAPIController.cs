@@ -21,7 +21,7 @@ namespace DirectoryPlus.RestControllers
     {
         private DirectoryContext db;
         private string adDomain = "ads.case.edu";
-
+        #region ctor
         public DirectoryAPIController()
         {
             //throw new NotImplementedException("Please don't use the default contructor");
@@ -29,14 +29,14 @@ namespace DirectoryPlus.RestControllers
         public DirectoryAPIController(DirectoryContext DBContext)
         {
             DirectoryDBContext = DBContext;
-        }
-
+        }       
         public DirectoryContext DirectoryDBContext
         {
             get { return db ?? HttpContext.Current.GetOwinContext().Get<DirectoryContext>(); }
             private set { db = value; }
         }
-                                
+        #endregion
+
         [Route("{aliasOrAdGroup}/{query?}")]
         public IEnumerable<DirectoryReturn> GetDirectory(string aliasOrAdGroup, string query = null)
         {

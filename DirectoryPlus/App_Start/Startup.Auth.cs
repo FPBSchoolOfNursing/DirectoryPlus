@@ -8,7 +8,7 @@ using DirectoryPlus.DataContexts;
 namespace DirectoryPlus
 {
     public partial class Startup
-    {
+    {        
         public DirectoryContext GetDirectoryContext()
         {
             return new DirectoryContext();
@@ -16,7 +16,7 @@ namespace DirectoryPlus
         public void ConfigureAuth(IAppBuilder app)
         {
             app.CreatePerOwinContext<DirectoryContext>(GetDirectoryContext);
-
+           
             app.UseCookieAuthentication(new CookieAuthenticationOptions
             {
                 AuthenticationType = DefaultAuthenticationTypes.ApplicationCookie,
