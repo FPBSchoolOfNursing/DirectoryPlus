@@ -366,6 +366,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\CaseUserIDRegex.cs" />
+    <Compile Include="Helpers\LDAP.cs" />
     <Compile Include="Interfaces\IDirectoryContext.cs" />
     <Compile Include="Interfaces\IRepository.cs" />
     <Compile Include="Models\DirectoryReturn.cs" />

@@ -76,7 +76,7 @@ namespace DirectoryPlus.RestControllers
             try
             {
                 var adservice = new ActiveDirectoryService(DirectoryDBContext);
-                adservice.SyncLocalDb(adDomain, aliasOrAdGroup);
+                adservice.SyncLocalDbAsync(adDomain, aliasOrAdGroup).Wait();
                 return Ok();
             }
             catch(Exception ex)

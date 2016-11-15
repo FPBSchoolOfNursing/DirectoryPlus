@@ -10,8 +10,8 @@ namespace DirectoryPlus.Helpers
     {
         public static bool isMatch(string CaseID)
         {
-            Regex caseid = new Regex(@"/^[a-zA-Z]{3}([1-9]\d{0,3})?$/");
-            return (caseid.IsMatch(CaseID));           
+            Regex caseid = new Regex(@"^[a-zA-Z]{3}([1-9]\d{0,3})?$");
+            return caseid.IsMatch(CaseID);           
         }
     }
 }
