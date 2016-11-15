@@ -20,7 +20,7 @@ namespace DirectoryPlus.RestControllers
     public class DirectoryAPIController : ApiController
     {
         private DirectoryContext db;
-        private string adDomain = "ads.case.edu";
+        private string adDomain = "ads.case.edu"; //todo: abstract this out to a better place.. Maybe web.config?
         #region ctor
         public DirectoryAPIController()
         {
@@ -71,10 +71,18 @@ namespace DirectoryPlus.RestControllers
         }
 
         [Route("Sync/{aliasOrAdGroup}")]
-        public void GetSync(string aliasOrAdGroup)
+        public IHttpActionResult GetSync(string aliasOrAdGroup)
         {
-            var adservice = new ActiveDirectoryService(DirectoryDBContext);
-            adservice.SyncLocalDb(adDomain, aliasOrAdGroup);
+            try
+            {
+                var adservice = new ActiveDirectoryService(DirectoryDBContext);
+                adservice.SyncLocalDb(adDomain, aliasOrAdGroup);
+                return Ok();
+            }
+            catch(Exception ex)
+            {
+                return new System.Web.Http.Results.ExceptionResult(ex, this);
+            }           
         }
 
 
